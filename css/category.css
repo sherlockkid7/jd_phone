@@ -1,0 +1,182 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: PingFangSC-Regular, Helvetica, Droid Sans, Arial, sans-serif;
+}
+
+
+/* 头部 */
+
+.cate_search {
+    width: 100%;
+    max-width: 640px;
+    height: 44px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+    border-bottom: 1px solid #ccc;
+}
+
+.cate_search .cateicon {
+    width: 20px;
+    height: 18px;
+    background: url(../uploads/cateicon.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 14px;
+    left: 15px;
+}
+
+.cate_search .search-box {
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin-top: 7px;
+    position: relative;
+}
+
+.cate_search .search-box::before {
+    content: "";
+    width: 18px;
+    height: 15px;
+    background: url(../img/jd-sprites.png) no-repeat;
+    background-size: 200px 200px;
+    background-position: -80px 0;
+    position: absolute;
+    top: 8px;
+    left: 65px;
+}
+
+.cate_search .search-box input {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding-left: 45px;
+    background: #f7f7f7;
+}
+
+
+/* 主体区 */
+
+.cate_container {
+    width: 100%;
+    height: 100%;
+    padding-top: 44px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.cate_container .cate_list {
+    height: 100%;
+    width: 85px;
+    float: left;
+    position: relative;
+}
+
+.cate_container .cate_list .listbox {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cate_container .cate_list .listbox li {
+    height: 46px;
+    line-height: 46px;
+    background: #f8f8f8;
+    text-align: center;
+    border-right: 1px solid #f7f7f7;
+}
+
+.cate_container .cate_list .listbox .active {
+    color: #e93b3d;
+    background-color: #fff;
+}
+
+.cate_container .cate_main {
+    margin-left: 86px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+/* .cate_container .cate_main .main_box {} */
+
+.cate_container .cate_main .cate_box {
+    margin: 19px 7px 0;
+    flex: 2;
+}
+
+.cate_container .cate_main .cate_box .main_title h3 {
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+
+.cate_container .cate_main .cate_box .main_title a {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.cate_container .cate_main .cate_box .main_title a::before,
+.cate_container .cate_main .cate_box .main_title a::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2px;
+}
+
+.cate_container .cate_main .cate_box .main_title a::before {
+    background: url(../uploads/catetop01.png) no-repeat;
+    background-size: 12px 12px;
+    left: -15px;
+}
+
+.cate_container .cate_main .cate_box .main_title a::after {
+    background: url(../uploads/catetop02.png) no-repeat;
+    background-size: 12px 12px;
+    right: -14px;
+}
+
+.cate_container .cate_main .cate_box .cate_content {
+    padding: 7px 10px 0;
+}
+
+.cate_container .cate_main .cate_box .cate_content ul li {
+    width: 32.8%;
+    float: left;
+    text-align: center;
+    margin-top: 9px;
+}
+
+.cate_container .cate_main .cate_box .cate_content ul li a img {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.cate_container .cate_main .cate_box .cate_content ul li span {
+    display: inline-block;
+    color: #333;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 2px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
